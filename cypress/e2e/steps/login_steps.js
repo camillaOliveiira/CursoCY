@@ -29,4 +29,3 @@ Then(/^tenho meu acesso "([^"]*)"$/, (args1) => {
     console.log(args1);
     return true;
 });
-
