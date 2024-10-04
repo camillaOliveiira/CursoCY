@@ -1,14 +1,16 @@
+import LoginPage from "../pages/login_page"
+const loginPage = new LoginPage
 
 Given(/^que eu queira acessar o sistema$/, () => {
-    return true;
+    loginPage.acessarHomePage()
 });
 
 When(/^eu inserir meu login e senha$/, () => {
-    return true;
+    loginPage.preencherDadosNaTela()
 });
 
 When(/^clicar no botão entrar$/, () => {
-    return true;
+    loginPage.clickEmLogin()
 });
 
 Then(/^tenho meu acesso realizado com sucesso$/, () => {

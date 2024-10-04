@@ -1,4 +1,4 @@
-/// <references types="Cypress" />
+/// <reference types="Cypress" />
 
 import LoginElements from "../elements/login";
 //instancia
@@ -10,7 +10,7 @@ class LoginPage {
         cy.visit('www.site.com.br')
     }
 
-    preencherDadoNaTela(){
+    preencherDadosNaTela(){
         //importa os elementos ja mapeados classe.elementoMapeado
         cy.get(loginElements.inputEmail()).type('endereco@email.com')
         cy.get(loginElements.inputPass()).type('senha')
@@ -19,4 +19,4 @@ class LoginPage {
     clickEmLogin() {
         cy.get(loginElements.btnEnter()).click()
     }
-}
+} export default LoginPage()
