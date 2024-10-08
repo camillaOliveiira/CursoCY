@@ -49,4 +49,7 @@ visitPage(){
     btnRefresh(){
         cy.get(registerElements.refreshRegister()).click();
     }
+    selectImage(){
+        cy.get(registerElements.selectFile()).selectFile('cypress/fixtures/Astro.jpeg');
+    }
 }

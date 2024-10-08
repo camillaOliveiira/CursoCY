@@ -5,7 +5,7 @@ export default class RegisterElements {
     inputAddress = () => { return '[ng-model="Adress"]' }
     inputAddressEmail = () => { return '#eid' }
     inputPhoneNumber = () => { return '[ng-model="Phone"]' }
-    selectFile = () => { return '#imagescr' }
+    selectFile = () => { return '#imagesrc' }
     checkRadioGender = () => { return '[type="radio"]' }
     checkHobbies = () => { return '[type="checkbox"]' }
     inputLanguages = () => { return '#msdd' }

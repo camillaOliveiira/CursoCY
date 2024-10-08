@@ -32,6 +32,7 @@ When(/^eu selecionar meu nascimento "([^"]*)", "([^"]*)" e "([^"]*)"$/, (year, m
 
 When(/^inserir minha senha "([^"]*)" e "([^"]*)"$/, (pass, confirm_Pass) => {
     registerPage.inputPasswords(pass, confirm_Pass)
+    registerPage.selectImage()
 
 });
 
