@@ -9,6 +9,7 @@ export default class RegisterElements {
     checkRadioGender = () => { return '[@type="radio"]' }
     checkHobbies = () => { return '[@type="checkbox"]' }
     inputLanguages = () => { return '[#msdd]' }
+    inputSkills = () => {return '#Skills'}
     selectCountry = () => { return '//*[@id="basicBootstrapForm"]/div[10]/div/span/span[1]/span' }
     selectYear = () => { return '#yearbox' }
     selectMonth = () => { return '[@placeholder="Month"]' }
