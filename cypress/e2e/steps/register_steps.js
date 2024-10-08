@@ -4,45 +4,42 @@ const registerPage = new RegisterPage
 
 
 Given(/^que estamos na page de cadasttro$/, () => {
-	registerPage.visitPage()
+    registerPage.visitPage()
 });
 
-Then(/^inserimos nosso nome "([^"]*)" e sobrenome "([^"]*)"$/, (args1,args2) => {
-	console.log(args1,args2);
-	
+Given(/^inserimos nosso nome "([^"]*)" e sobrenome "([^"]*)"$/, (name, surname) => {
+    registerPage.fillNameAndSurname(name, surname)
 });
 
-Then(/^informarmos nossos dados de contato "([^"]*)", "([^"]*)" e "([^"]*)"$/, (args1,args2,args3) => {
-	console.log(args1,args2,args3);
-	
+Given(/^informarmos nossos dados de contato "([^"]*)", "([^"]*)" e "([^"]*)"$/, (address, email, phone) => {
+    registerPage.fillContacts(address, email, phone)
 });
 
-Then(/^nosso genero como "([^"]*)" e hobbies "([^"]*)"$/, (args1,args2) => {
-	console.log(args1,args2);
-	
+Given(/^nosso genero como "([^"]*)" e hobbies "([^"]*)"$/, (gender, hobbies) => {
+    registerPage.selectRadioGender(gender)
+    registerPage.selectCheckHobbies(hobbies)
 });
 
-Then(/^nossas skilss "([^"]*)" e nosso pais "([^"]*)"$/, (args1,args2) => {
-	console.log(args1,args2);
-	
+Given(/^nossas skilss "([^"]*)" e nosso pais "([^"]*)"$/, (skill, country) => {
+    registerPage.selectSkills(skill)
+    registerPage.selectCountry(country)
 });
 
-When(/^eu selecionar meu nascimento "([^"]*)", "([^"]*)" e "([^"]*)"$/, (args1,args2,args3) => {
-	console.log(args1,args2,args3);
-	
+When(/^eu selecionar meu nascimento "([^"]*)", "([^"]*)" e "([^"]*)"$/, (year, month, day) => {
+    registerPage.selectBirthday(year, month, day)
+
 });
 
-When(/^inserir minha senha "([^"]*)" e "([^"]*)"$/, (args1,args2) => {
-	console.log(args1,args2);
-	
+When(/^inserir minha senha "([^"]*)" e "([^"]*)"$/, (pass, confirm_Pass) => {
+    registerPage.inputPasswords(pass, confirm_Pass)
+
 });
 
-When(/^clicar no botao entrar$/, () => {
-	
+When(/^clico no botao cadastrar$/, () => {
+    registerPage.btnSubmit()
 });
 
-Then(/^tenho meu cadastro "([^"]*)".$/, (args1) => {
-	console.log(args1);
-	
+Then(/^tenho meu cadastro "([^"]*)".$/, (mensagem) => {
+    console.log(mensagem);
 });
 

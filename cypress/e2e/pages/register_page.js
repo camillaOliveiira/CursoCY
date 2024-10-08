@@ -32,7 +32,7 @@ visitPage(){
         cy.get(registerElements.inputSkills()).select(skill);
     }
     selectCountry(country) {
-        cy.get(registerElements.inputSkills()).select(country);
+        cy.get(registerElements.selectCountry()).select(country, {force: true});
     }
     selectBirthday(year, month, day) {
         cy.get(registerElements.selectYear()).select(year);
@@ -49,5 +49,4 @@ visitPage(){
     btnRefresh(){
         cy.get(registerElements.refreshRegister()).click();
     }
-
 }

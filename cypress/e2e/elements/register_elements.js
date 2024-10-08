@@ -8,12 +8,12 @@ export default class RegisterElements {
     selectFile = () => { return '#imagescr' }
     checkRadioGender = () => { return '[type="radio"]' }
     checkHobbies = () => { return '[type="checkbox"]' }
-    inputLanguages = () => { return '[#msdd]' }
+    inputLanguages = () => { return '#msdd' }
     inputSkills = () => {return '#Skills'}
     selectCountry = () => { return '#country' }
     selectYear = () => { return '#yearbox' }
     selectMonth = () => { return '[placeholder="Month"]' }
-    selectDay = () => { return 'daybox' }
+    selectDay = () => { return '#daybox' }
     inputPass = () => { return '#firstpassword' }
     inputConfirmPass = () => { return '#secondpassword' }
     submitRegister = () => { return '#submitbtn' }
