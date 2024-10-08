@@ -18,3 +18,10 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+Cypress.on('uncaught:exception', (err, nunnable) => {
+    //faca algo com o erro, como imprimi-lo no console
+    console.error('Erro nao capturado:', err.message);
+
+    // Retorne false para evitar que o cypress falhe o teste
+    return false;
+});

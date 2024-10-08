@@ -2,7 +2,13 @@
 import RegisterElements from "../elements/register_elements";
 const registerElements = new RegisterElements
 
+const url = 'https://demo.automationtesting.in/Register.html'
+
 export default class RegisterPage {
+
+visitPage(){
+    cy.visit(url);
+}
 
     fillNameAndSurname(name, surname) {
         cy.get(registerElements.inputFirstName()).type(name);

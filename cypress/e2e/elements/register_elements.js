@@ -1,18 +1,18 @@
 export default class RegisterElements {
 
-    inputFirstName = () => { return '[@placeholder="First Name"]' }
-    inputLastName = () => { return '[@placeholder="Last Name"]' }
-    inputAddress = () => { return '//*[@id="basicBootstrapForm"]/div[2]/div/textarea' }
+    inputFirstName = () => { return '[placeholder="First Name"]' }
+    inputLastName = () => { return '[placeholder="Last Name"]' }
+    inputAddress = () => { return '[ng-model="Adress"]' }
     inputAddressEmail = () => { return '#eid' }
-    inputPhoneNumber = () => { return '//*[@id="basicBootstrapForm"]/div[4]/div/input' }
+    inputPhoneNumber = () => { return '[ng-model="Phone"]' }
     selectFile = () => { return '#imagescr' }
-    checkRadioGender = () => { return '[@type="radio"]' }
-    checkHobbies = () => { return '[@type="checkbox"]' }
+    checkRadioGender = () => { return '[type="radio"]' }
+    checkHobbies = () => { return '[type="checkbox"]' }
     inputLanguages = () => { return '[#msdd]' }
     inputSkills = () => {return '#Skills'}
-    selectCountry = () => { return '//*[@id="basicBootstrapForm"]/div[10]/div/span/span[1]/span' }
+    selectCountry = () => { return '#country' }
     selectYear = () => { return '#yearbox' }
-    selectMonth = () => { return '[@placeholder="Month"]' }
+    selectMonth = () => { return '[placeholder="Month"]' }
     selectDay = () => { return 'daybox' }
     inputPass = () => { return '#firstpassword' }
     inputConfirmPass = () => { return '#secondpassword' }
