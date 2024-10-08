@@ -5,7 +5,7 @@ module.exports = defineConfig({
   e2e: {
     defaultCommandTimeout: 10000,
     baseUrl: "https://phptravels.net/",
-    specPattern: "**/*/.feature",
+    specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
       on("file:preprocessor", cucumber());
     },

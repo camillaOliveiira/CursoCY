@@ -3,6 +3,6 @@ class LoginElements {
 //quando não tiver id usar texto 
     inputEmail = () => { return '#email' }
     inputPassword = () => { return '#password' }
-    btnLogin = () => { return '#submitBTN' }
+    submitLogin = () => { return '#submitBTN' }
 
 } export default LoginElements

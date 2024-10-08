@@ -1,31 +1,24 @@
-import LoginPage from "../pages/login_page"
+/// <reference types="cypress"/>
+import LoginPage from "../pages/login_page";
 const loginPage = new LoginPage
 
-Given(/^que eu queira acessar o sistema$/, () => {
-    loginPage.acessarHomePage()
+
+Given(/^que eu acesse a pagina home da aplicação$/, () => {
+	LoginPage.accessHomePage()
 });
 
-When(/^eu inserir meu login e senha$/, () => {
-    loginPage.preencherDadosNaTela()
+When(/^eu inserir meu email "([^"]*)" e senha "([^"]*)"$/, (email, password) => {
+	console.log(email,password);
+	LoginPage.accessLoginPage()
+    LoginPage.fillLoginInfo(email, password)
 });
 
 When(/^clicar no botão entrar$/, () => {
-    loginPage.clickEmLogin()
+	LoginPage.submitLogin()
 });
 
-Then(/^tenho meu acesso realizado com sucesso$/, () => {
-    return true;
-});
+Then(/^tenho meu acesso "([^"]*)"$/, (mensagem) => {
+	console.log(mensagem);
+    //cy.contains('Dashboard');
 
-//Variacoes
-//não pode conter repeticoes nos steps
-
-When(/^eu inserir meu login "([^"]*)" e senha "([^"]*)"$/, (args1, args2) => {
-    console.log(args1, args2);
-    return true;
-});
-
-Then(/^tenho meu acesso "([^"]*)"$/, (args1) => {
-    console.log(args1);
-    return true;
 });

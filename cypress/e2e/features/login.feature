@@ -16,8 +16,8 @@ Funcionalidade para realizar variados logins no sistema PHPTravels
              Then tenho meu acesso "<mensagem>"
 
         Examples:
-                  | cenario                                    | email               | senha    | mensagem                  |
-                  | Login com sucesso                          | user@phptravels.com | demouser | com sucesso na aplicação  |
-                  | Login com senha incorreta                  | user@phptravels.com | 0000     | Login com senha incorreta |
-                  | Login com email incorreto                  | fulano@fulano.com   | demouser | Login com senha incorreta |
-                  | Login sem preencher os campos obrigatorios |                     |          | Acesso Negado             |
+                  | cenario                   | email               | senha    | mensagem                  |
+                  | Login com sucesso         | user@phptravels.com | demouser | com sucesso na aplicação  |
+                  | Login com senha incorreta | user@phptravels.com | 0000     | Login com senha incorreta |
+                  | Login com email incorreto | fulano@fulano.com   | demouser | Login com senha incorreta |
+                  

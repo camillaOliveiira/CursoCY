@@ -29,9 +29,9 @@ const homeElements = new HomeElements
 
 const url = Cypress.config('baseUrl')
 
-class LoginPage {
+export default class LoginPage {
 
-    accessHomePage() {
+    static accessHomePage() {
         //abre a pagina
         cy.visit(url);
         cy.wait(3000);
@@ -39,19 +39,19 @@ class LoginPage {
         cy.get(homeElements.btnHideCookie()).click();
     }
 
-    accessLoginPage() {
+    static accessLoginPage() {
         //quando se trata de texto usamos o cy.contains = contem
         cy.contains(homeElements.selectAccount()).click();
         cy.contains(homeElements.btnLogin()).click();
     }
 
-    fillLoginInfo(email, password) {
+    static fillLoginInfo(email, password) {
         cy.get(loginElements.inputEmail()).type(email);
         cy.get(loginElements.inputPassword()).type(password);
     }
 
-    submitLogin() {
+    static submitLogin() {
         cy.get(loginElements.submitLogin()).click();
     }
 
-} export default LoginPage
+} 
