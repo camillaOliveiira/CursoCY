@@ -1,5 +1,5 @@
 Feature: Formulario de credencial
-    Formulario de requisicao de criacao de usuarios
+    Formulario de requisicao de criacao de credencial de usuarios
 
         Scenario Outline: "<caso_teste>"
             Given que eu estou na pagina web
