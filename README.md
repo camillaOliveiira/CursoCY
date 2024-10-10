@@ -31,7 +31,26 @@ Nescessário:
 
 
 Terminal:
-`npm install cypress`
+### Configurando o Ambiente :gear: ###
 
-// iniciar o cypress
-`npx cypress open`
+#### Iniciando o projeto ####
+
+1. Faça um clone do projeto:
+2. Instale o Node.js no computador
+3. Instale o Vs code para gerenciar os arquivos do projeto
+4. No terminal, com a tecla (CTRL + aspas simples) abra o terminal do VS code
+5. Navegue até a pasta onde clonou o repositório (Utilize ls para listar e cd nome da pasta para entra) e execute os seguintes comandos:
+```shell
+    npm install
+    npm init
+    npm install cypress --save-dev
+    npm install cypress-cucumber-preprocessor --save-dev
+    npm install blob-util --save-dev
+    npm i cypress-intercept-formdata
+    npm install cypress-form-data  
+    npm install form-data  
+```
+6. Iniciar o Cypress
+```shell
+   npx cypress open
+```
