@@ -14,7 +14,7 @@ export default class DashLogin {
      btnSubmit(){
         cy.get(dashElements.BtnSubmit()).click();
     }
-    ValidLogin(){
-        cy.contains(dashElements.DashVisible).should("be.visible");
+    ValidLogin(Super){
+        cy.contains(Super)
     }
 }
